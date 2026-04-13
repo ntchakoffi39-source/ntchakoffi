@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N'TCHA Koffi | Portfolio</title>
+
+<!-- AOS ANIMATION -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+/* ================= HERO ================= */
+.hero{
+  padding:40px 20px;
+}
+
+.hero-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+
+/* PHOTO */
+.hero-img img{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #ff7a00;
+  box-shadow:0 0 20px rgba(255,122,0,0.3);
+}
+
+/* TEXTE */
+.hero-text h1{
+  font-size:clamp(26px, 3vw, 42px);
+  margin-bottom:5px;
+}
+
+.subtitle{
+  color:#ff7a00;
+  font-weight:bold;
+  margin-bottom:15px;
+  font-size:clamp(14px, 2vw, 18px);
+}
+
+.desc{
+  line-height:1.6;
+  color:#cbd5e1;
+  max-width:700px;
+}
+
+/* LINKS */
+.links{
+  margin-top:15px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.links a{
+  padding:8px 14px;
+  border:2px solid #ff7a00;
+  color:#ff7a00;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+  font-size:14px;
+}
+
+.links a:hover{
+  background:#ff7a00;
+  color:white;
+}
+
+/* ================= NAV ================= */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  background:#111c33;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#ff7a00;
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:28px;
+}
+
+/* ================= CARDS ================= */
+.card{
+  background:#f3f4f5;
+  color:#0f172a;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+  .hero-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .desc{
+    text-align:center;
+  }
+
+  .links{
+    justify-content:center;
+  }
+
+  .hero-img img{
+    width:140px;
+    height:140px;
+  }
+}
+
+</style>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+
+  <div class="hero-container">
+
+    <!-- PHOTO PROFIL -->
+    <div class="hero-img">
+      <img src="https://avatars.githubusercontent.com/u/273359670?s=400&u=3d8afeeb97ce6821cf41488f0c0da3e1e489efa4&v=4" alt="Photo de N'TCHA Koffi">
+    </div>
+
+    <!-- TEXTE -->
+    <div class="hero-text">
+      <h1>N'TCHA Koffi</h1>
+
+      <p class="subtitle">
+        Data Scientist | Épidémiologiste | Socio-anthropologue | Santé publique
+      </p>
+
+      <p class="desc">
+        Je transforme les données de santé et les réalités sociales en analyses exploitables pour éclairer les politiques publiques.
+        Mon approche combine la science des données, l’épidémiologie et la socio-anthropologie pour comprendre les dynamiques sanitaires dans leur contexte humain réel.
+      </p>
+
+      <div class="links">
+        <a href="https://orcid.org/0009-0006-5382-9842" target="_blank">ORCID</a>
+        <a href="https://www.linkedin.com/in/koffi-n-tcha-9701123a3" target="_blank">LinkedIn</a>
+        <a href="https://drive.google.com/drive/folders/16PGLFsRXLcJxfdcLJgUjT2fZEkpngMpW" target="_blank">Documents</a>
+      </div>
+
+    </div>
+  </div>
+
+<!-- ================= NAVIGATION ================= -->
+<nav>
+  <a href="#education">Formation</a>
+  <a href="#experience">Expériences</a>
+  <a href="#skills">Compétences</a>
+  <a href="#publications">Publications</a>
+  <a href="#references">Ressources</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+
+<!-- ================= FORMATION ================= -->
+<section id="education">
+
+<h2 class="edu-title">🎓 Formation académique</h2>
+
+<style>
+/* SECTION UNIQUEMENT (ISOLÉE) */
+#education{
+  background:#0f172a;
+  padding:8px 10px;
+}
+
+/* TITRE */
+#education .edu-title{
+  text-align:center;
+  color:white;
+  margin-bottom:40px;
+}
+
+/* GRID */
+#education .edu-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:20px;
+}
+
+/* CARTE (ISOLÉE) */
+#education .edu-card{
+  background:#f8fafe;
+  padding:20px;
+  border-radius:12px;
+  color:#000000;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+#education .edu-card:hover{
+  transform:translateY(-5px);
+}
+
+/* TITRE CARTE */
+#education .edu-card h3{
+  color:rgb(4, 3, 3);
+  font-size:17px;
+}
+
+/* BOUTONS (ISOLÉS → NE CASSE RIEN) */
+#education .edu-btn{
+  display:inline-block;
+  margin-top:4px;
+  margin-right:8px;
+  padding:8px 10px;
+  border-radius:8px;
+  border:2px solid #ff7a00;
+  background:#1e293b;
+  color:#ff7a00;
+  text-decoration:none;
+  font-size:11px;
+  transition:0.3s;
+}
+
+#education .edu-btn:hover{
+  background:#ff7a00;
+  color:white;
+  box-shadow:0 0 10px rgba(255,122,0,0.6);
+}
+
+/* RESPONSIVE MOBILE */
+@media(max-width:600px){
+  #education .edu-btn{
+    display:block;
+    margin-bottom:8px;
+  }
+}
+</style>
+
+<div class="edu-container">
+
+<!-- MASTER -->
+<div class="edu-card">
+<h3>Master en Épidémiologie et Interventions en Santé Publique | 2019 - 2021</h3>
+<p>Université d’Abomey-Calavi, Bénin</p>
+<p><strong>Moyenne :</strong> 16,46 / 20 | <strong>Rang :</strong> 1er (major)</p>
+
+<a href="https://drive.google.com/file/d/1RfnrYdA4ua5UQ3OeEwH8XmdUqarLLh06/view" class="edu-btn">📄 Diplôme</a>
+<a href="https://drive.google.com/file/d/1whWajKtt5ICxpYV6RdFhe9bdIIBEea_g/view" class="edu-btn">📊 Notes</a>
+
+<p>
+<strong>Contact administratif:</strong>
+<a href="mailto:helenerobin44@gmail.com" class="edu-btn">✉️ Email</a>
+</p>
+</div>
+
+<!-- LICENCE SP -->
+<div class="edu-card">
+<h3>Licence en Santé Publique | 2013 - 2016</h3>
+<p>Université de Parakou</p>
+<p><strong>Moyenne :</strong> 15,81 / 20 | <strong>Rang :</strong> 2e</p>
+
+<a href="https://drive.google.com/file/d/1FJmVMa9bqrTrTCDmXNUhMJA3zFvUilwg/view" class="edu-btn">📄 Diplôme</a>
+<a href="https://drive.google.com/file/d/1qX4cm4ZuRRn42j0uNWezMZ7GY5sbQZMb/view" class="edu-btn">📊 Notes</a>
+<a href="https://drive.google.com/file/d/1iBTMhg4pBxpFQwqyAfbFSND8TuaCLf2M/view" class="edu-btn">🏆 Classement</a>
+</div>
+
+<!-- SOCIO -->
+<div class="edu-card">
+<h3>Licence Sociologie-Anthropologie | 2014 - 2017</h3>
+<p>Université de Parakou</p>
+
+<a href="https://drive.google.com/file/d/1-dRk-U0C5_dyqemXuI5Ld-XY4gA3yGFw/view" class="edu-btn">📊 Notes</a>
+</div>
+
+</div>
+
+</section>
+
+<style>
+
+h2{
+  text-align:center;
+  padding:1px;
+}
+
+.container{
+  padding:1px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.card:hover{
+  transform:scale(1.01);
+}
+
+.kpi{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+
+.kpi span{
+  background:#e8f0fe;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:13px;
+  cursor:help;
+  position:relative;
+}
+
+.kpi span:hover::after{
+  content:attr(data-info);
+  position:absolute;
+  bottom:-30px;
+  left:0;
+  background:rgb(11, 11, 11);
+  color:white;
+  padding:5px 8px;
+  font-size:12px;
+  border-radius:5px;
+  white-space:nowrap;
+}
+
+.tip{
+  font-size:12px;
+  color:#666;
+  margin-top:5px;
+}
+
+.btn{
+  margin-top:10px;
+  padding:7px 12px;
+  border:none;
+  border-radius:6px;
+  background:#1a73e8;
+  color:white;
+  cursor:pointer;
+}
+
+.details{
+  display:none;
+  margin-top:10px;
+  padding:10px;
+  border-left:3px solid #d8dce0;
+  background:#fafafa;
+}
+
+.contact a{
+  display:inline-block;
+  margin-right:10px;
+  margin-top:8px;
+  padding:6px 10px;
+  border-radius:6px;
+  text-decoration:none;
+  color:white;
+}
+
+.mail{background:#2b018b;}
+.call{background:#28a745;}
+
+ul{margin-top:0;}
+
+</style>
+
+<section id="experience">
+
+<h2 style="color:white;">📊 Expériences professionnelles</h2>
+<p style="font-size:13px; font-style:italic; color:#cbd5e1; text-align:center;">
+J'ai exercé certaines fonctions simultanément
+</p>
+<div class="container">
+
+<!-- ================= 1 ================= -->
+<div class="card">
+<h3>COORDONNATEUR SANTÉ | CRB | 2025</h3>
+
+<div class="kpi">
+<span data-info="Partenariats externes coordonnés">06 partenariats</span>
+<span data-info="Personnel sous supervision directe">06 staffs</span>
+<span data-info="Financement mobilisé pour le département">500M FCFA</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('e1')">Voir les détails</button>
+
+<div id="e1" class="details">
+<ul>
+<li>Coordination des projets santé</li>
+<li>Gestion RH, logistique et financière</li>
+<li>Représentation institutionnelle</li>
+<li>Gestion des partenariats</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:audrey.adjai@croixrougebenin.org">Email RH CRB</a>
+</div>
+</div>
+</div>
+
+<!-- ================= 2 ================= -->
+<div class="card">
+<h3>RESPONSABLE SUIVI-ÉVALUATION | CRB | 2023-2024</h3>
+
+<div class="kpi">
+<span data-info="Outils conçus et déployés">120 outils</span>
+<span data-info="Acteurs formés">512 personnes</span>
+<span data-info="Formations sanitaires évaluées">74 évaluations</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('e2')">Voir les détails</button>
+
+<div id="e2" class="details">
+<ul>
+<li>Planification et suivi des activités</li>
+<li>Évaluation des projets santé</li>
+<li>Digitalisation des outils</li>
+<li>Gestion des données</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:audrey.adjai@croixrougebenin.org">Email RH CRB</a>
+</div>
+</div>
+</div>
+
+<!-- ================= 4 ================= -->
+<div class="card">
+<h3>ÉPIDÉMIOLOGISTE | MINISTÈRE DE LA SANTÉ | 2020-2022</h3>
+
+<div class="kpi">
+<span data-info="Agents formés">70 agents</span>
+<span data-info="Agents supervisés">15 superviseurs</span>
+<span data-info="Dépistage et vaccination">COVID-19</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('e4')">Voir les détails</button>
+
+<div id="e4" class="details">
+<ul>
+<li>Gestion de la pandémie COVID-19</li>
+<li>Dépistage et vaccination</li>
+<li>Analyse des données clinques</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:anges_demon@yahoo.fr">Email DNMH</a>
+</div>
+</div>
+</div>
+
+<!-- POINT FOCAL (CORRIGÉ COMPLET) -->
+<div class="card">
+<h3>POINT FOCAL SANTÉ | CRB | 2024-2025</h3>
+
+<div class="kpi">
+<span data-info="Agents formés sur le terrain">90 agents</span>
+<span data-info="Enfants et femmes touchés par les campagnes de vaccination de supplémentation en vitamine A">9 115 enfants / 5 890 femmes</span>
+<span data-info="Personnes sensibilisées sur les thématiques santé, WASH, Nutrition">15 210 personnes</span>
+<span data-info="Enfants dépistés MAM (PEC hospitalière) et MAS (PEC communautaire)">3179 dépistés | 300 MAS & 1243 MAM</span>
+<span data-info="Infrastructures WASH réalisées, désinfection pour les puits">73 latrines / 15 pompes / 140 puits</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('pf')">Voir les détails</button>
+
+<div id="pf" class="details">
+<ul>
+<li>Coordination des partenariat UNICEF / CICR</li>
+<li>Gestion des ressources humaines, logistiques et financières</li>
+<li>Analyse des données et reporting</li>
+<li>Coordination des interventions santé, nutrition et WASH</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:audrey.adjai@croixrougebenin.org">Email RH CRB</a>
+</div>
+</div>
+</div>
+
+<!-- CARE INTERNATIONAL -->
+<div class="card">
+<h3>COORDINATEUR COMMUNAL | CARE INTERNATIONAL | 2023</h3>
+
+<div class="kpi">
+<span data-info="Agents de terrain supervisés">09 agents</span>
+<span data-info="Base de données gérée">6 000 élèves</span>
+<span data-info="Personnes sensibilisées sur les VBG et mariages précoces">7 000 élèves / 1 200 parents</span>
+<span data-info="Plaintes communautaires traitées">300 cas</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('care')">Voir les détails</button>
+
+<div id="care" class="details">
+<ul>
+<li>Coordination du projet CASH + CARE</li>
+<li>Planification et supervision des activités</li>
+<li>Gestion des données terrain</li>
+<li>Collaboration avec autorités locales</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:koghis2002@yahoo.fr">Email CP CARE Bénin-Togo</a>
+</div>
+</div>
+</div>
+
+<!-- CONSULTANT ASSOCIÉ -->
+<div class="card">
+<h3>DATA MANAGER / CONSULTANT ASSOCIÉ | 2020</h3>
+
+<div class="kpi">
+<span data-info="Agents formés">15 agents / 05 superviseurs</span>
+<span data-info="Ménages étudiés">1 320 ménages</span>
+<span data-info="Outils digitalisés">KoboToolbox</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('consultant')">Voir les détails</button>
+
+<div id="consultant" class="details">
+<ul>
+<li>Élaboration du protocole de recherche</li>
+<li>Digitalisation des outils de collecte</li>
+<li>Analyse avancée des dépenses catastrophiques</li>
+<li>Restitution des résultats</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:esambieni@yahoo.fr">Email chercheur principal</a>
+</div>
+</div>
+</div>
+
+<!-- CHERCHEUR ASSOCIÉ (GLOBAL) -->
+<div class="card">
+<h3>CHERCHEUR ASSOCIÉ | R-SUD / LASDEL | 2016 à ce jour [en freelance]</h3>
+
+<div class="kpi">
+<span data-info="Protocoles de recherche">08 projets</span>
+<span data-info="Agents formés">489 agents</span>
+<span data-info="Équipes supervisées">20 équipes</span>
+<span data-info="Analyses de données">>1000 observations</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('chercheur')">Voir les détails</button>
+
+<div id="chercheur" class="details">
+<ul>
+<li>Élaboration de protocoles de recherche</li>
+<li>Supervision d’équipes terrain</li>
+<li>Analyses statistiques avancées</li>
+<li>Présentations scientifiques</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:esambieni@yahoo.fr">Email chercheur principal</a>
+</div>
+</div>
+</div>
+
+<!-- ENABEL -->
+<div class="card">
+<h3>DATA MANAGER | ENABEL-BÉNIN | 2017</h3>
+
+<div class="kpi">
+<span data-info="Base de données analysée">798 données</span>
+<span data-info="Type d’analyse réalisée">Analyse statistique + régression</span>
+<span data-info="Ateliers de restitution">02 ateliers</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('enabel')">Voir les détails</button>
+
+<div id="enabel" class="details">
+<ul>
+<li>Supervision des enquêtes mixtes</li>
+<li>Évaluation des Agents de Santé Non Qualifiés (ASNQ)</li>
+<li>Traitement et analyse des données avec <strong>SPSS</strong></li>
+<li>Présentation des résultats lors des ateliers de validation et restitution</li>
+</ul>
+
+<div class="contact">
+<a class="mail" href="mailto:rene.pare@enabel.be">Email Enabel</a>
+</div>
+</div>
+</div>
+
+<!-- AIGHD -->
+<div class="card">
+<h3>ASSISTANT DE RECHERCHE | AIGHD | 2021</h3>
+
+<div class="kpi">
+<span data-info="Agents formés">30 agents</span>
+<span data-info="Base de données">880 données</span>
+<span data-info="Analyse mixte">Quanti + Quali</span>
+</div>
+
+<p class="tip">👉 Survolez un résultat pour plus d’informations</p>
+
+<button class="btn" onclick="toggle('aighd')">Voir les détails</button>
+
+<div id="aighd" class="details">
+<ul>
+<li>Formation des enquêteurs</li>
+<li>Analyse STATA et QDA Miner</li>
+<li>Participation à la restitution</li>
+</ul>
+
+<div class="contact">
+<a class="call" href="tel:+2290197259740">Appeler chercheur principal</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggle(id){
+  let el=document.getElementById(id);
+  el.style.display = (el.style.display==="block")?"none":"block";
+}
+</script>
+
+<!-- ================= COMPETENCES ================= -->
+
+<!-- ================= COMPETENCES ================= -->
+<section id="skills">
+
+<h2 style="color:white;">💻 Compétences techniques (TRES MAITRISEES)</h2>
+
+<style>
+#skills{
+  padding:40px 20px;
+  background:#253660;
+}
+
+/* ================= GRID ÉCHIQUIER ================= */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(190px,1fr));
+  gap:14px;
+  margin-top:25px;
+}
+
+/* CARTE */
+.skill-card{
+  background:#1e293b;
+  border:2px solid #ff7a00;
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+  transition:0.3s;
+  color:white;
+}
+
+.skill-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 12px rgba(255,122,0,0.5);
+}
+
+.cat{
+  color:#ff7a00;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.tool a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.tool a:hover{
+  color:#ff7a00;
+}
+
+.level{
+  font-size:12px;
+  color:#cbd5e1;
+  margin-top:5px;
+}
+
+/* CENTRE */
+.center-box{
+  grid-column:1/-1;
+  background:#0f172a;
+  border:2px solid #1a73e8;
+  padding:18px;
+  text-align:center;
+  border-radius:15px;
+  font-weight:bold;
+  color:#1a73e8;
+}
+</style>
+
+<div class="skills-grid">
+
+<div class="center-box">
+DATA SCIENCE EN SANTÉ PUBLIQUE • ÉPIDÉMIOLOGIE • MACHINE LEARNING • SIG
+</div>
+
+<!-- ================= PYTHON CORE ================= -->
+<div class="skill-card">
+<div class="cat">Python</div>
+<div class="tool"><a href="https://www.python.org" target="_blank">Python</a></div>
+<div class="level">Programmation scientifique</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Data Handling</div>
+<div class="tool"><a href="https://pandas.pydata.org" target="_blank">pandas</a></div>
+<div class="level">Manipulation de données</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Numérique</div>
+<div class="tool"><a href="https://numpy.org" target="_blank">numpy</a></div>
+<div class="level">Calcul scientifique</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Visualisation</div>
+<div class="tool"><a href="https://matplotlib.org" target="_blank">matplotlib</a></div>
+<div class="level">Graphiques statistiques</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Visualisation avancée</div>
+<div class="tool"><a href="https://seaborn.pydata.org" target="_blank">seaborn</a></div>
+<div class="level">Analyse exploratoire</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Dashboard</div>
+<div class="tool"><a href="https://plotly.com/python/" target="_blank">plotly</a></div>
+<div class="level">Visualisation interactive</div>
+</div>
+
+<!-- ================= STATISTIQUE ================= -->
+<div class="skill-card">
+<div class="cat">Statistique</div>
+<div class="tool"><a href="https://www.statsmodels.org" target="_blank">statsmodels</a></div>
+<div class="level">Modèles statistiques (Poisson, etc.)</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Formules</div>
+<div class="tool"><a href="https://www.statsmodels.org/stable/formulas.html" target="_blank">statsmodels.formula.api</a></div>
+<div class="level">Modélisation avancée</div>
+</div>
+
+<!-- ================= MACHINE LEARNING ================= -->
+<div class="skill-card">
+<div class="cat">ML</div>
+<div class="tool"><a href="https://scikit-learn.org" target="_blank">scikit-learn</a></div>
+<div class="level">Machine Learning</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Classification</div>
+<div class="tool"><a href="https://xgboost.readthedocs.io" target="_blank">XGBoost</a></div>
+<div class="level">Gradient boosting</div>
+</div>
+
+<!-- ================= ÉVALUATION ================= -->
+<div class="skill-card">
+<div class="cat">Évaluation</div>
+<div class="tool">Accuracy / Metrics</div>
+<div class="level">Performance modèles ML</div>
+</div>
+
+<!-- ================= GÉOSPATIAL ================= -->
+<div class="skill-card">
+<div class="cat">SIG</div>
+<div class="tool"><a href="https://geopandas.org" target="_blank">geopandas</a></div>
+<div class="level">Données géospatiales</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Cartographie</div>
+<div class="tool"><a href="https://python-visualization.github.io/folium/" target="_blank">folium</a></div>
+<div class="level">Cartes interactives</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Heatmap</div>
+<div class="tool"><a href="https://python-visualization.github.io/folium/plugins.html" target="_blank">HeatMap</a></div>
+<div class="level">Densité spatiale</div>
+</div>
+
+<!-- ================= ADVANCED SCIENCE ================= -->
+<div class="skill-card">
+<div class="cat">Science</div>
+<div class="tool"><a href="https://www.scipy.org" target="_blank">SciPy ecosystem</a></div>
+<div class="level">Analyse scientifique</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Recherche</div>
+<div class="tool"><a href="https://www.r-project.org" target="_blank">R</a></div>
+<div class="level">Statistiques avancées</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Recherche</div>
+<div class="tool"><a href="https://provalisresearch.com/fr/produits/logiciel-d-analyse-qualitative/" target="_blank">QDA Miner</a></div>
+<div class="level">Analyse qualitatives mixtes</div>
+</div>
+
+<div class="skill-card">
+<div class="cat">Bibliographie</div>
+<div class="tool"><a href="#" target="_blank">Zotéro|Mendeley|EndNote</a></div>
+<div class="level">Gestion références</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+
+<section id="publications" data-aos="fade-up">
+
+<h2>Publications scientifiques</h2>
+
+<div class="card">
+<h3>Comparative study of Hepatitis B and C related Hepatocellular Carcinoma in Cotonou (2014–2020)</h3>
+<p>South African Journal of Gastroenterology and Hepatology, 2025</p>
+<a href="https://ojs.sabinet.co.za/index.php/sajgh/article/view/1452/1339" class="btn">Lire</a>
+</div>
+
+<div class="card">
+<h3>Survie et facteurs pronostiques du cancer primitif du foie à Cotonou</h3>
+<p>MTSI, 2024</p>
+<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11577100/" class="btn">Lire</a>
+</div>
+
+<div class="card">
+<h3>Prévalence et co-consommation alcool-tabac à Natitingou</h3>
+<p>Global Health Promotion, 2024</p>
+<a href="https://journals.sagepub.com/eprint/P9AAIHCIT6QNBYCWUQ7G/full" class="btn">Lire</a>
+</div>
+<div class="card">
+<h3>Contraception moderne féminine et implication des hommes</h3>
+<p>Revue Internationale Dônni, 2022</p>
+<a href="https://drive.google.com/file/d/1gGIspi2FDGiTf-WhAqLC7Sc7uPkhwZX8/view?usp=drive_link" class="btn">Lire</a>
+</div>
+
+<div class="card">
+<h3>Prévalence et facteurs associés à la dysménorrhée à Parakou</h3>
+<p>Open Journal of Obstetrics and Gynecology, 2020</p>
+<a href="https://doi.org/10.4236/ojog.2020.1080095" class="btn">Lire</a>
+</div>
+
+<div class="card">
+<h3>Hypertensive disorders of pregnancy in Parakou</h3>
+<p>Open Journal of Obstetrics and Gynecology, 2021</p>
+<a href="https://doi.org/10.4236/ojog.2021.117081" class="btn">Lire</a>
+</div>
+
+<div class="card">
+<h3>Pratiques des ONG chinoises et maladies non transmissibles au Bénin</h3>
+<p>Cahiers de l’ACAREF, 2019</p>
+<a href="https://drive.google.com/file/d/1foV4FDNIj66ymnpGjZo0asRajEDzb6ms/view?usp=drive_link" class="btn">Lire</a>
+</div>
+
+</section>
+
+<!-- ================= PERSONNES RESSOURCES ================= -->
+<section id="references" data-aos="fade-up">
+
+<h2 style="color:white;text-align:center;">👨‍⚕️ Personnes ressources</h2>
+
+<div class="ref-container">
+
+<!-- PERSONNE 1 -->
+<div class="ref-card">
+<img src="https://ui-avatars.com/api/?name=David+Houeto&background=0f172a&color=ffffff&size=128" alt="Pr David HOUETO">
+<h3>Pr David HOUETO</h3>
+<p><em>Professeur Titulaire en Promotion de la santé</em></p>
+
+
+<div class="ref-links">
+<a href="mailto:dhouto@gmail.com">✉️ Email</a>
+<a href="https://orcid.org/0000-0001-9299-9453" target="_blank">ORCID</a>
+</div>
+</div>
+
+<!-- PERSONNE 2 -->
+<div class="ref-card">
+<img src="https://ui-avatars.com/api/?name=Emmanuel+Sambieni&background=0f172a&color=ffffff&size=128" alt="Pr SAMBIENI">
+<h3>Pr N'koué Emmanuel SAMBIENI</h3>
+<p><em>Professeur Titulaire en Socio-anthropologie de la santé</em></p>
+
+<div class="ref-links">
+<a href="mailto:esambieni@yahoo.fr">✉️ Email</a>
+<a href="https://orcid.org/0000-0003-3452-4374" target="_blank">ORCID</a>
+</div>
+</div>
+
+<!-- PERSONNE 3 -->
+<div class="ref-card">
+<img src="https://ui-avatars.com/api/?name=Cyrille+Boko&background=0f172a&color=ffffff&size=128" alt="Dr Cyrille K. BOKO">
+<h3>Dr Cyrille BOKO</h3>
+<p><em>Professeur Titulaire, Microbiologie Médicale et vétérinaire</em></p>
+<p style="font-size:13px;">Coordonnateur du Groupe de Recherche sur les Maladies Transmissibles et la Biosécurité</p>
+
+<div class="ref-links">
+<a href="mailto:cyrilleboko@yahoo.fr">✉️ Email</a>
+<a href="https://orcid.org/0000-0003-4282-596X" target="_blank">ORCID</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= STYLE ================= -->
+<style>
+#references{
+  padding:50px 20px;
+  background:#0f172a;
+  color:white;
+}
+
+.ref-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.ref-card{
+  background:#f8fafe;
+  color:#0f172a;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.ref-card:hover{
+  transform:translateY(-5px);
+}
+
+.ref-card img{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:10px;
+}
+
+.ref-links{
+  margin-top:10px;
+}
+
+.ref-links a{
+  display:inline-block;
+  margin:5px;
+  padding:6px 10px;
+  border-radius:8px;
+  border:2px solid #ff7a00;
+  color:#ff7a00;
+  text-decoration:none;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.ref-links a:hover{
+  background:#ff7a00;
+  color:white;
+}
+</style>
+
+<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
+<!-- ================= CONTACT ================= -->
+<section id="contact" data-aos="fade-up">
+
+<h2 style="color:white;text-align:center;">Contact</h2>
+
+<p style="text-align:center;">📞 +229 0196 6733 57</p>
+<p style="text-align:center;">📧 ntchakoffi39@gmail.com</p>
+
+<form action="mailto:ntchakoffi39@gmail.com" method="POST" enctype="text/plain">
+
+<input type="text" name="Nom" placeholder="Nom" required>
+<input type="email" name="Email" placeholder="Email" required>
+<textarea name="Message" placeholder="Message" rows="5" required></textarea>
+
+<button type="submit">Envoyer</button>
+
+</form>
+
+</section>
+
+<!-- STYLE CONTACT -->
+<style>
+#contact{
+  padding:50px 20px;
+  background:#0f172a;
+  color:white;
+}
+
+#contact form{
+  max-width:500px;
+  margin:20px auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+#contact input,
+#contact textarea{
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  font-size:14px;
+}
+
+#contact button{
+  background:#ff7a00;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+#contact button:hover{
+  background:#e96b00;
+}
+</style>
+
+<!-- ================= FOOTER ================= -->
+<footer style="text-align:center;padding:20px;color:white;background:#111c33;">
+© 2026 N'TCHA Koffi
+</footer>
+
+<!-- ================= AOS (UNE SEULE FOIS ICI) ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
+
