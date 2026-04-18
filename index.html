@@ -59,29 +59,33 @@ body{
   line-height:1.6;
   color:#cbd5e1;
   max-width:700px;
+  text-align: justify;
 }
 
 /* LINKS */
-.links{
-  margin-top:15px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.links a{
-  padding:8px 14px;
-  border:2px solid #ff7a00;
-  color:#ff7a00;
-  text-decoration:none;
-  border-radius:8px;
-  transition:0.3s;
-  font-size:14px;
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: orange;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid orange;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
-
-.links a:hover{
-  background:#ff7a00;
-  color:white;
+.btn:hover {
+  background-color: rgb(153, 101, 4);
+  color: #fefefe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
 }
 
 /* ================= NAV ================= */
@@ -131,10 +135,18 @@ h2{
 /* ================= RESPONSIVE ================= */
 @media(max-width:768px){
 
+
   .hero-container{
-    flex-direction:column;
-    text-align:center;
-  }
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;  /* 🔥 empile verticalement */
+    align-items: center;
+    text-align: center;
+}
 
   .desc{
     text-align:center;
@@ -163,27 +175,41 @@ h2{
     </div>
 
     <!-- TEXTE -->
-    <div class="hero-text">
-      <h1>N'TCHA Koffi</h1>
+   <div class="hero-text">
 
-      <p class="subtitle">
-        Data Scientist | Épidémiologiste | Socio-anthropologue | Santé publique
-      </p>
+  <div class="hero-content">
 
-      <p class="desc">
-        Je transforme les données de santé et les réalités sociales en analyses exploitables pour éclairer les politiques publiques.
-        Mon approche combine la science des données, l’épidémiologie et la socio-anthropologie pour comprendre les dynamiques sanitaires dans leur contexte humain réel.
-      </p>
+    <h1 class="hero-title">N'TCHA Koffi</h1>
 
-      <div class="links">
-        <a href="https://orcid.org/0009-0006-5382-9842" target="_blank">ORCID</a>
-        <a href="https://www.linkedin.com/in/koffi-n-tcha-9701123a3" target="_blank">LinkedIn</a>
-        <a href="https://drive.google.com/drive/folders/16PGLFsRXLcJxfdcLJgUjT2fZEkpngMpW" target="_blank">Documents</a>
+    <p class="subtitle">
+      Data Scientist en santé publique | Épidémiologie | IA appliquée à la santé
+    </p>
+
+    <p class="desc">
+      Data Scientist en santé publique, je dispose de solides compétences en épidémiologie analytique, en modélisation statistique et en analyse de données complexes. 
+      Mon expérience couvre aussi l’exploitation de bases médico-administratives, l’analyse de données longitudinales ainsi que la modélisation de survie. 
+      J’utilise principalement Python et R pour développer des modèles prédictifs et contribuer à l’amélioration de la prise de décision en santé.
+    </p>
+
+       <div class="links">
+        <a class="btn" href="https://script.google.com/macros/s/AKfycby8iM2EWzAUJAV4qg4KKdaymjVvDjLHHQRtJhEjAYvNucsjdmXBP0f3qKyzVtdTqMQk5w/exec?ref=ntchakoffi39@gmail.com" target="_blank">📩 Email</a>
+
+        <a class="btn" href="tel:+2290196673357">📞 M'appeler</a>
+
+        <a class="btn" href="https://orcid.org/0009-0006-5382-9842" target="_blank">🧬 ORCID</a>
+
+        <a class="btn" href="https://www.linkedin.com/in/koffi-n-tcha-9701123a3" target="_blank">💼 LinkedIn</a>
+
+        <a class="btn" href="https://drive.google.com/drive/folders/16PGLFsRXLcJxfdcLJgUjT2fZEkpngMpW" target="_blank">📂 Documents</a>
+      </div>
+
       </div>
 
     </div>
+
   </div>
 
+</header>
 <!-- ================= NAVIGATION ================= -->
 <nav>
   <a href="#education">Formation</a>
@@ -289,7 +315,7 @@ AOS.init();
 
 <p>
 <strong>Contact administratif:</strong>
-<a href="mailto:helenerobin44@gmail.com" class="edu-btn">✉️ Email</a>
+<a href="https://script.google.com/macros/s/AKfycby8iM2EWzAUJAV4qg4KKdaymjVvDjLHHQRtJhEjAYvNucsjdmXBP0f3qKyzVtdTqMQk5w/exec?ref=helenerobin44@gmail.com" class="edu-btn">✉️ Email</a>
 </p>
 </div>
 
@@ -373,8 +399,8 @@ h2{
   padding:7px 12px;
   border:none;
   border-radius:6px;
-  background:#1a73e8;
-  color:white;
+  background:#052c88;
+  color:rgb(255, 255, 255);
   cursor:pointer;
 }
 
@@ -934,7 +960,7 @@ DATA SCIENCE EN SANTÉ PUBLIQUE • ÉPIDÉMIOLOGIE • MACHINE LEARNING • SIG
 
 
 <div class="ref-links">
-<a href="mailto:dhouto@gmail.com">✉️ Email</a>
+<a href="https://script.google.com/macros/s/AKfycby8iM2EWzAUJAV4qg4KKdaymjVvDjLHHQRtJhEjAYvNucsjdmXBP0f3qKyzVtdTqMQk5w/exec?ref=dhouto@gmail.com">✉️ Email</a>
 <a href="https://orcid.org/0000-0001-9299-9453" target="_blank">ORCID</a>
 </div>
 </div>
@@ -946,7 +972,7 @@ DATA SCIENCE EN SANTÉ PUBLIQUE • ÉPIDÉMIOLOGIE • MACHINE LEARNING • SIG
 <p><em>Professeur Titulaire en Socio-anthropologie de la santé</em></p>
 
 <div class="ref-links">
-<a href="mailto:esambieni@yahoo.fr">✉️ Email</a>
+<a href="https://script.google.com/macros/s/AKfycby8iM2EWzAUJAV4qg4KKdaymjVvDjLHHQRtJhEjAYvNucsjdmXBP0f3qKyzVtdTqMQk5w/exec?ref=esambieni@yahoo.fr">✉️ Email</a>
 <a href="https://orcid.org/0000-0003-3452-4374" target="_blank">ORCID</a>
 </div>
 </div>
@@ -959,7 +985,7 @@ DATA SCIENCE EN SANTÉ PUBLIQUE • ÉPIDÉMIOLOGIE • MACHINE LEARNING • SIG
 <p style="font-size:13px;">Coordonnateur du Groupe de Recherche sur les Maladies Transmissibles et la Biosécurité</p>
 
 <div class="ref-links">
-<a href="mailto:cyrilleboko@yahoo.fr">✉️ Email</a>
+<a href="https://script.google.com/macros/s/AKfycby8iM2EWzAUJAV4qg4KKdaymjVvDjLHHQRtJhEjAYvNucsjdmXBP0f3qKyzVtdTqMQk5w/exec?ref=cyrilleboko@yahoo.fr">✉️ Email</a>
 <a href="https://orcid.org/0000-0003-4282-596X" target="_blank">ORCID</a>
 </div>
 </div>
